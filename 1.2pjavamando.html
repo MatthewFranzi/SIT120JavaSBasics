@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+<head>
+<title>Mandos Java Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.cdnfonts.com/css/star-wars" rel="stylesheet">  
+
+<!-- I have used a websites code to make a star wars font for my webpage (in link, @import, and font-family as apart of my div) if this is not allowed i can remove this-->
+
+
+<style>
+.Div1 {
+border: 20px outset rgb(111, 110, 103);
+background-color: rgb(66, 41, 5);
+text-align: center;
+font-size: large;
+font-family: 'Star Wars', sans-serif; 
+
+color: rgb(205, 194, 194)
+
+}
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+</style>
+</head>
+
+
+<body>
+<div class="Div1">
+    <img src="C:\Users\matth\OneDrive\Pictures\darksabe.png" alt="darksaber" width="100%" height="auto%">
+    <h1 ><img src="C:\Users\matth\OneDrive\Pictures\the_razor_crest_transparent__by_wookiekookie_deyvp58-fullview.png" alt="ship" width="5%" height="auto"><img src="C:\Users\matth\OneDrive\Pictures\mandohelm.avif" alt="mando" width="5%" height="auto"> Welcome to Mando's Java Test <img src="C:\Users\matth\OneDrive\Pictures\mandohelm.avif" alt="mando" width="5%" height="auto"><img src="C:\Users\matth\OneDrive\Pictures\the_razor_crest_transparent__by_wookiekookie_deyvp58-fullview.png" alt="ship" width="5%" height="auto"></h1>
+    <img src="C:\Users\matth\OneDrive\Pictures\darksabe.png" alt="darksaber" width="100%" height="auto">
+    <h1 style="font-size: 3vw;"> String Methods: at least 5 </h1>
+    <br></br>
+    
+    <p style="font-size: 1vw;">>>> the first example is length, by implementing a length script i can find the amoutn of letters in this sentence.
+    <br> the amount of letters in the above sentence is: <p id="letters"></p></p>
+    <!-- returns string length -->
+    <script>
+        let text = "thefirstexampleislengthbyimplementingalengthscripticanfindtheamountoflettersinthissentence";
+        document.getElementById("letters").innerHTML = text.length;
+    </script>
+    <!-- java script responsible for returning string length -->
+    <br></br>
+
+    <p style="font-size: 1vw;">>>> the second example is slicing, in this example i can slice out a name from a portion of string and return it
+    <br> the name i sliced out is: <p id="slice"></p></p>
+    <!-- returns slice -->
+    <script>
+        let char = "Boba Fett, Bo-Katan, Grogu, Kuiil";
+        let part = char.slice(11,19);
+        document.getElementById("slice").innerHTML = part; 
+    </script>
+    <!-- java script responsible for slicing -->
+    <br></br>
+
+    <p style="font-size: 1vw;">>>>the third example is replace all, replace all allows me to replace all specified words in a line of string with another:</p>
+    <br>
+    <p>the original sentence is:</p> 
+    <br>
+    <p>i think the Mandalorian is the best character of the show, the Mandalorian is the most popular!</p>
+    <br> 
+    <p>the new sentence is:<br><p id="reptext"></p></p>
+    <!-- returns replaced string -->
+    <script>
+        let origtext = "i think the Mandalorian is the best character of the show, the Mandalorian is the most popular!"
+        origtext = origtext.replaceAll("the Mandalorian","Grogu");
+        
+        document.getElementById("reptext").innerHTML = origtext;
+    </script>
+    <!-- java script responsible for replaced string -->
+    <br></br>
+
+    <p style="font-size: 1vw;">>>>the fourth example is concat which is the joining of two or more strings this will join the strings "star" and "wars" together</p>
+    <br>
+    <p> word 1 (star) and word 2 (wars) concatenated makes:<p id="SWconcat"></p>
+    <!-- returns concatenated string -->
+    <script>
+        let word1 = "star";
+        let word2 = "wars";
+        let word3 = word1.concat(" ",word2);
+        document.getElementById("SWconcat").innerHTML = word3;
+    </script>
+    <!-- java script responsible for replaced string -->
+    <br></br>
+
+    <p style="font-size: 1vw;">>>>the fifth example is charAt which returns a character at specified string position within a line of string.</p>
+    <br><p>for this example i will return the chracter "r" from "Cara Dune"</p>
+    <p id="charAT"></p>
+    <!-- returns character at specified location -->
+    <script>
+        var word = "Cara Dune";
+        document.getElementById("charAT").innerHTML = word.charAt(2);
+    </script>
+    <!-- java script responsible for chracter at returned -->
+    <br></br>
+
+    <img src="C:\Users\matth\OneDrive\Pictures\darksabe.png" alt="darksaber" width="100%" height="auto%">
+    <h1 style="font-size: 3vw;"> Number Methods: at least 5 </h1>
+    <br></br>
+    <p style="font-size: 1vw;">>>>The first example is the toString method which converts a number to string, this converts the integer "i" to string.</p>
+    <p> i is equal to: </p><p id="toString"></p>
+    <!-- converts integer x to into string-->
+    <script>
+        let i = 100;
+        document.getElementById("toString").innerHTML =
+          i.toString();
+    </script>
+    <!-- Javascript responsible for converting integer to string -->
+    <br></br>
+
+    <p style="font-size: 1vw;">>>>The second example is the toExponential Method which returns a string with a number rounded
+        <br>using exponential notation with a defined number of digits behind the decimal point
+        <br> in this case 1 decimal point and 6 </br></p>
+    <p> J is equal to: </p><p id="toEXP"></p>
+    <!-- returns rounded exponent into string-->
+    <script>
+        let j = 4.821;
+        document.getElementById("toEXP").innerHTML =
+        j.toExponential(1) + "<br>" + j.toExponential(6);
+    </script>
+    <!-- Javascript responsible for reutrned rounded exponent -->
+    <br></br>
+
+    <p style="font-size: 1vw;">>>>The third example is the toFixed Method which returns a string with a number specified
+        <br>with a specific amount of decimal places.
+        <br> in this case 2 decimal places and 4 </br></p>
+    <p> k is equal to: </p><p id="decPLC"></p>
+    <!-- returns numbers numbers to string with 2 decimal places for the first and 4 for the second-->
+    <script>
+        let k = 8.74652;
+        document.getElementById("decPLC").innerHTML =
+        k.toFixed(2) + "<br>" + k.toFixed(4);
+    </script>
+    <!-- Javascript responsible for returned string number to decimal places -->
+    <br></br>
+
+    <p style="font-size: 1vw;">>>>The fourth example is the toPrecision Method which returns a string with a number written
+        <br>with a specific length.
+        <br> in this case a length of 3 and a length of 8 </br></p>
+    <p> k is equal to: </p><p id="TOpre"></p>
+    <!-- returns numbers numbers to string with specified length-->
+    <script>
+        let l = 9.9999999999999999999;
+        document.getElementById("TOpre").innerHTML =
+        l.toPrecision(2) + "<br>" + l.toPrecision(8);
+    </script>
+    <!-- Javascript responsible for returned string numbers with specified length -->
+    <br></br>
+
+    <p style="font-size: 1vw;">>>>The fifth example is the valueOf Method which returns
+        <br> a number as a number </p>
+    <p> m is equal to: </p><p id="RetNu"></p>
+    <!-- returns numbers numbers to string with specified length-->
+    <script>
+        let m = 856;
+        document.getElementById("RetNu").innerHTML =
+        m.valueOf();
+    </script>
+    <!-- Javascript responsible for returned string numbers with specified length -->
+    <br></br>
+    
+    <img src="C:\Users\matth\OneDrive\Pictures\darksabe.png" alt="darksaber" width="100%" height="auto">
+    <h1 style="font-size: 3vw;"> Array Methods: at least 5 </h1>
+
+    <p style="font-size: 1vw;">>>>The first example is the tostring Method which returns
+        <br> an array as a string with commas to divide the array elements </p>
+    <p> the mando's crew counted array returned is: </p><p id="arrTS"></p>
+    <!-- returns array as string -->
+    <script>
+        const crew = [1, 2, 3, 4];
+        document.getElementById("arrTS").innerHTML = crew.toString();
+    </script>
+    <!-- Javascript responsible for returned array as string -->
+    <br></br>
+
+    <p style="font-size: 1vw;">>>>The second example is the pop Method which removes
+        <br> the last element inside of an array </p>
+    <p> the mando's crew array returned -1 is: </p><p id="arrPOP"></p>
+    <!-- returns array with element removed-->
+    <script>
+        const crew2 = ["Mando", "Grogu", "Bo-Katan", "Boba Fett"];
+        document.getElementById("arrPOP").innerHTML = crew;
+        crew.pop();
+        document.getElementById("arrPOP").innerHTML = crew;
+    </script>  
+    <!-- Javascript responsible for returned array with element removed -->
+    <br></br>
+
+    <p style="font-size: 1vw;">>>>The third example is the push Method which adds
+        <br> a new element inside of an array </p>
+    <p> the mando's crew array returned is: </p><p id="crewA"></p>
+    <p> the mando's crew array returned + Ahsoka Tano is: </p><p id="crewB"></p>
+    <!-- returns array with element added-->
+    <script>
+        const crew3 = ["Mando", "Grogu", "Bo-Katan", "Boba Fett"];
+        document.getElementById("crewA").innerHTML = crew3;
+        crew3.push("Ahsoka Tano");
+        document.getElementById("crewB").innerHTML = crew3;
+    </script>  
+    <!-- Javascript responsible for returned array with element added -->
+    <br></br>
+    
+    <p style="font-size: 1vw;">>>>The fourth example is the shift Method which removes
+        <br> the first element inside of an array 
+        <br> and shifts all other elements to a lower index</p>
+    <p> the mando's crew array returned is: </p><p id="crewa"></p>
+    <p> the mando's crew array returned -Mando is: </p><p id="crewb"></p>
+    <!-- returns array with element removed-->
+    <script>
+        const crew4 = ["Mando", "Grogu", "Bo-Katan", "Boba Fett"];
+        document.getElementById("crewa").innerHTML = crew4;
+        crew4.shift();
+        document.getElementById("crewb").innerHTML = crew4;
+    </script>  
+    <!-- Javascript responsible for returned array with element removed -->
+    <br></br>
+
+    <p style="font-size: 1vw;">>>>The fifth example is the unshift Method which adds
+        <br> a new first element inside of an array 
+        <br> and shifts all other elements to a lower index</p>
+    <p> the mando's crew array returned is: </p><p id="crewaa"></p>
+    <p> the mando's crew array returned +Ahsoka Tano at the front is: </p><p id="crewbb"></p>
+    <!-- returns array with element added at the front-->
+    <script>
+        const crew5 = ["Mando", "Grogu", "Bo-Katan", "Boba Fett"];
+        document.getElementById("crewaa").innerHTML = crew5;
+        crew5.unshift("Ahsoka Tano");
+        document.getElementById("crewbb").innerHTML = crew5;
+    </script>  
+    <!-- Javascript responsible for returned array with element added at the front -->
+    <br></br>
+
+    <img src="C:\Users\matth\OneDrive\Pictures\darksabe.png" alt="darksaber" width="100%" height="auto%">
+    <h1 style="font-size: 3vw;"> Date Methods: at least 5 </h1>
+    <br></br>
+
+    <p style="font-size: 1vw;">>>>The first example is the new Date method that returns
+        <br> and creates an object with the current date and time: </p>
+    <p id="Cdate"></p>
+    <!-- returns created current date object with date and time-->
+    <script>
+        const date = new Date();
+        document.getElementById("Cdate").innerHTML = date;
+    </script>
+    <!-- script responsible for created and returned current date object-->
+    <br></br>
+
+    
+    <p style="font-size: 1vw;">>>>The second example is the new Date(date string) method that returns
+        <br> and creates an object from a specified date string: </p>
+    <p> the release date of the first episode of the Mandalorian was </p><p id="DSdate"></p>
+    <!-- returns specified date object with date and time-->
+    <script>
+        const date2 = new Date("November 12, 2019 07:00:00");
+        document.getElementById("DSdate").innerHTML = date2;
+    </script>
+    <!-- script responsible for created and returned specified date object-->
+    <br></br>
+
+    <p style="font-size: 1vw;">>>>The third example is the new Date(year month) method that returns
+        <br> and creates an object from a specified year and month string: </p>
+    <p> the release date of the last episode of the Mandalorian in season 1 was </p><p id="YMdate"></p>
+    <!-- returns created specified date object with month and year-->
+    <script>
+        const date3 = new Date(2019, 11, 27, 10, 33, 30, 0);
+        document.getElementById("YMdate").innerHTML = date3;
+    </script>
+    <!-- script responsible for created and returned specified date object-->
+    <br></br>
+    
+    <p style="font-size: 1vw;">>>>The fourth example is the previous century new Date(year, month, day ) method that returns
+        <br> and creates an object from a specified year and month string: </p>
+    <p> the release date of the first Star Wars movie is </p><p id="OgSW"></p>
+    <!-- returns created specified date object with previous century year month and day-->
+    <script>
+        const date4 = new Date(77, 10, 27);
+        document.getElementById("OgSW").innerHTML = date4;
+    </script>
+    <!-- script responsible for created and returned specified date object-->
+    <br></br>
+
+    <p style="font-size: 1vw;">>>>The fifth example is new Date(millisecons) method that returns
+        <br> and creates an object from a specified year and month string in milliseconds: </p>
+    <p> 100000000000 milliseconds from January 01 1970 is </p><p id="MilOGSW"></p>
+    <!-- returns created specified milleseconds from date object-->
+    <script>
+        const date5 = new Date(100000000000);
+        document.getElementById("MilOGSW").innerHTML = date5;
+    </script>
+    <!-- script responsible for created and returned milliseconds from date object-->
+    <br></br>
+    
+    <img src="C:\Users\matth\OneDrive\Pictures\darksabe.png" alt="darksaber" width="100%" height="auto">
+    <h1 style="font-size: 3vw;">Function Methods: at least 2 </h1>
+
+    <p style="font-size: 1vw;">>>>The first example is a simple multiplication function 
+        <br> this method perofrms multiplication between two specified integers
+        <br> lets find out what integer we would have if we multiplied the amount of episodes 24
+        <br> by the amount of seasons 3: <p id="calc1"></p></p>
+        <!-- returns calculation of sea and eps using 'multipFunction' -->
+        <script>
+            function multipFunction(Sea, Eps) {
+              return Sea * Eps;
+            }
+            
+            let result = multipFunction(24, 3);
+            document.getElementById("calc1").innerHTML = result;
+        </script>
+        <!-- java script responsible for calculation function-->
+
+        <br></br>
+        <p style="font-size: 1vw;">>>>The second example is a simple string function 
+            <br> this method writes out a sentence adding in determined variables in this case
+            <br> shipName being Razor Crest and compName being Gorgu
+            <br> The function reads: 
+            <br><p id="StringF"></p></p>
+        <script>
+            
+            function StringFunction() {
+            let shipName = " The Razor Crest ";
+            let compName = "Gorgu ";
+            let text = "The Mandalorians ship is:" + shipName + "the Mandalorians companion is: " + compName; 
+            document.getElementById("StringF").innerHTML = text;
+            }
+            StringFunction();
+        
+        </script>
+        <br></br>
+    <img src="C:\Users\matth\OneDrive\Pictures\darksabe.png" alt="darksaber" width="100%" height="auto%">
+    <h1 ><img src="C:\Users\matth\OneDrive\Pictures\the_razor_crest_transparent__by_wookiekookie_deyvp58-fullview.png" alt="ship" width="5%" height="auto"><img src="C:\Users\matth\OneDrive\Pictures\mandohelm.avif" alt="mando" width="5%" height="auto"> End of Mando's Java Test <img src="C:\Users\matth\OneDrive\Pictures\mandohelm.avif" alt="mando" width="5%" height="auto"><img src="C:\Users\matth\OneDrive\Pictures\the_razor_crest_transparent__by_wookiekookie_deyvp58-fullview.png" alt="ship" width="5%" height="auto"></h1>
+    <img src="C:\Users\matth\OneDrive\Pictures\darksabe.png" alt="darksaber" width="100%" height="auto">
+        
+
+    
+
+
+
+    
+
+
+
+
+         
+</div>
+
+
+</body>
+</html>
